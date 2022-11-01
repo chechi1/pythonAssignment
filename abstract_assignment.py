@@ -1,8 +1,16 @@
 from abc import ABC, abstractmethod
+
+from abstract_classes import UserManager
 class Product:
-    weight = ""
+    description = ""
+    item = ""
     material = ""
-    price = ""
+    product = ""
+    product_image = ""
+    product_id = 0
+    all_products = ""
+
+
 
 class ProductAbstract(ABC):
     @abstractmethod
@@ -10,15 +18,15 @@ class ProductAbstract(ABC):
         pass
 
     @abstractmethod
-    def edit_product(item,):
+    def edit_product(item):
         pass
 
     @abstractmethod
-    def get_all_prodcut_by_id(item, product_id):
+    def get_product_by_id(item, product_id):
         pass
 
     @abstractmethod
-    def get_all_product(item):
+    def get_all_products(item):
         pass
 
     @abstractmethod
@@ -41,14 +49,29 @@ class ProductManager(ProductAbstract):
    def edit_product(item):
         print("product description")
 
-   def get_prodcut_by_id(item, product_id):
+   def get_product_by_id(item, product_id):
         print("Id codes")
 
    def get_all_products(item, all_products):
-        print("All products")
-        g
+        print("All products listed here")
+        
    def upload_product_image(item, product_image):
        print("product images")
 
    def delete_product(item):
        print ("image deleted")
+
+
+product_manager = ProductManager()
+product = Product()
+product.product = "Dress"
+product.product_id = 78256
+product.description = "Long black dress"
+product.material = "Cotton"
+
+product_manager = ProductManager()
+product_manager.create_user(product)
+product_manager.edit_product("Change description")
+
+
+

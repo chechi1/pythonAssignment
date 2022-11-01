@@ -72,6 +72,8 @@ product.material = "Cotton"
 product_manager = ProductManager()
 product_manager.create_user(product)
 product_manager.edit_product("Change description")
+product_manager.get_all_products("Product list")
+product_manager.get_product_by_id(78256)
 
 
 
